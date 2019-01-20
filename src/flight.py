@@ -21,10 +21,11 @@ def arrival(callsign, departure, destination):
   route = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][entry_point])
 
   return '''
-@N:{callsign}:0000:1:{position}:33000:0:50:0:0
+@N:{callsign}:0000:1:{position}:32000:0:50:0:0
 $FP{callsign}{flight_plan}
 $ROUTE:{route}
 DELAY:3:7
+REQALT:ABLEG:7000
 '''.format(
     callsign=callsign,
     position=position,
