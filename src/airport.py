@@ -5,14 +5,17 @@ from . import AIRPORT_SETTINGS
 from . import flight
 
 class Airport():
-  def __init__(self, icao, rwy, total_departures=1):
+  def __init__(self, icao, rwy, total_departures=1, total_arrivals=0):
     self.icao = icao
     self.rwy = rwy
     self.total_departures = total_departures
+    self.total_arrivals = total_arrivals
 
     self.departures = list()
+    self.arrivals = list()
 
     self._generate_departures()
+    self._generate_arrivals()
 
   def _generate_departures(self):
     callsigns_per_destination = AIRPORT_SETTINGS[self.icao]['DEPARTURE_CALLSIGNS']
@@ -33,10 +36,22 @@ class Airport():
 
     shuffle(self.departures)
   
+  def _generate_arrivals(self):
+    callsigns_per_departure = AIRPORT_SETTINGS[self.icao]['ARRIVAL_CALLSIGNS']
+
+    for departure in callsigns_per_departure:
+      for callsign in callsigns_per_departure[departure]:
+        self.arrivals.append(flight.arrival(
+          callsign,
+          departure,
+          self.icao
+        ))
+  
   def __str__(self):
     return '\n'.join([
       *AIRPORT_SETTINGS[self.icao][self.rwy],
       *AIRPORT_SETTINGS[self.icao]['ALL'],
       '\n',
       *self.departures[:self.total_departures],
+      *self.arrivals[:self.total_arrivals]
     ])

@@ -14,3 +14,20 @@ $FP{callsign}{flight_plan}
     stand=stand,
     flight_plan=flight_plan
   )
+
+def arrival(callsign, departure, destination):
+  flight_plan, entry_point = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure])
+  position = AIRPORT_SETTINGS[destination]['ARRIVAL_POSITIONS'][entry_point]
+  route = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][entry_point])
+
+  return '''
+@N:{callsign}:0000:1:{position}:33000:0:50:0:0
+$FP{callsign}{flight_plan}
+$ROUTE:{route}
+DELAY:3:7
+'''.format(
+    callsign=callsign,
+    position=position,
+    flight_plan=flight_plan,
+    route=route
+  )

@@ -74,7 +74,23 @@ _LPPR = {
     '41.234981:-8.674888', # S23
     '41.234630:-8.674799', # S22
     '41.234253:-8.674633', # S21
-  ]
+  ],
+  'ARRIVAL_CALLSIGNS': {
+    'LPPT': ['TAP1920',]
+  },
+  'ARRIVAL_FPL': {
+    'LPPT': [
+      (':*A:I:B738:440:LPPT:0000:0000:350:LPPR:00:00:0:0::/v/:PESUL ', 'PESUL'),
+      (':*A:I:B738:450:LPPT:0000:0000:370:LPPR:00:00:0:0::/v/:PESUL ', 'PESUL'),
+      (':*A:I:B738:460:LPPT:0000:0000:390:LPPR:00:00:0:0::/v/:PESUL ', 'PESUL'),
+    ]
+  },
+  'ARRIVAL_ROUTES': {
+    'PESUL': ['PR662 PR636 PR652 XAPIM',]
+  },
+  'ARRIVAL_POSITIONS': {
+    'PESUL': '40.880920:-8.114224',
+  }
 }
 
 _LPCS = {
