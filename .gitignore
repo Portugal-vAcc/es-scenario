@@ -1,0 +1,5 @@
+*.txt
+bin
+include
+lib
+*__pycache__
