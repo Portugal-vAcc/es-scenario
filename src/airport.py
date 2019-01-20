@@ -10,17 +10,23 @@ class Airport():
     self.rwy = rwy
     self.total_departures = total_departures
 
+    self.departures = list()
+
     self._generate_departures()
 
   def _generate_departures(self):
-    self.departures = list()
-
     callsigns_per_destination = AIRPORT_SETTINGS[self.icao]['DEPARTURE_CALLSIGNS']
+    stands = AIRPORT_SETTINGS[self.icao]['STANDS']
+
+    self.departures = list()
+    shuffle(stands)
 
     for destination in callsigns_per_destination:
       for callsign in callsigns_per_destination[destination]:
         departure = Flight(callsign, self.icao, destination)
-        self.departures.append(str(departure))
+        if (len(stands) > 0):
+          departure.stand = stands.pop()
+          self.departures.append(str(departure))
 
     shuffle(self.departures)
   
