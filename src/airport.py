@@ -2,7 +2,7 @@
 from random import shuffle
 
 from . import AIRPORT_SETTINGS
-from .flight import Flight
+from . import flight
 
 class Airport():
   def __init__(self, icao, rwy, total_departures=1):
@@ -23,10 +23,13 @@ class Airport():
 
     for destination in callsigns_per_destination:
       for callsign in callsigns_per_destination[destination]:
-        departure = Flight(callsign, self.icao, destination)
         if (len(stands) > 0):
-          departure.stand = stands.pop()
-          self.departures.append(str(departure))
+          self.departures.append(flight.departure(
+            callsign,
+            self.icao,
+            destination,
+            stands.pop()
+          ))
 
     shuffle(self.departures)
   
