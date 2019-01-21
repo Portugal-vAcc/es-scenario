@@ -77,7 +77,7 @@ _LPPR = {
   ],
   'ARRIVAL_CALLSIGNS': {
     'LPPT': ['TAP1920','TAP1921','TAP1922',],
-	'LEMD': ['IBE9154', 'TAP1923']
+    'LEMD': ['IBE9154', 'TAP1923']
   },
   'ARRIVAL_FPL': {
     'LPPT': [
@@ -90,21 +90,21 @@ _LPPR = {
   },
   'ARRIVAL_ROUTES': {
     'RIVRO': ['PESUL PR662 AKULU',],
-	'INBOM': ['ABLEG PR653 AKULU',]
+	  'INBOM': ['ABLEG PR653 AKULU',]
   },
   'ARRIVAL_POSITIONS': {
     'RIVRO': '40.620256:-6.724482',
-	'INBOM': '40,124342:-8,334573',
+	  'INBOM': '40,124342:-8,334573',
   },
   'ARRIVAL_STARS': {
-	'35':{
-		'LPPT':'ABLEG:7000',
-		'LEMD':'PESUL:7000',
-		},
-	'17':{
-		'LPPT':'ABLEG:8000',
-		'LEMD':'PESUL:7000',
-	},
+    '35':{
+      'LPPT':'ABLEG:7000',
+      'LEMD':'PESUL:7000',
+      },
+    '17':{
+      'LPPT':'ABLEG:8000',
+      'LEMD':'PESUL:7000',
+    },
   }
 }
 
