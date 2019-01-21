@@ -10,17 +10,6 @@ _LPPT = {
     'AIRPORT_ALT:0'
   ],
   'DEPARTURE_CALLSIGNS': {
-<<<<<<< HEAD
-    'LPPR': ['SWT230P', 'RYR2093', 'RYR2095', 'RYR2695', 'TAP1921', 'TAP1923', 'TAP1925',]
-  },
-  'DEPARTURE_FPL': {
-    # all lines start with $FP{callsign}
-    'LPPR': [
-      ':*A:I:B738:400:LPPT:0000:0000:180:LPPR:00:00:0:0::/v/:INBOM DCT ABLEG',
-      ':*A:I:B738:410:LPPT:0000:0000:210:LPPR:00:00:0:0::/v/:INBOM DCT ABLEG',
-      ':*A:I:B738:420:LPPT:0000:0000:200:LPPR:00:00:0:0::/v/:INBOM DCT ABLEG',
-    ]
-=======
     'CYUL': ['ROU1961', 'TSC581'],
     'CYYZ': ['ROU1917'],
     'EBBR': ['TAP648', 'BEL61B', 'TAP644', 'RYR7QC'],
@@ -541,7 +530,6 @@ _LPPT = {
               'DCT BEXAL DCT SAMAR UN873 CVS UB623 ESGUM'],
     'SBSV': [ ':*A:I:B738:400:LPPT:0000:0000:190:SBSV:00:00:0:0::/v/:NAKOS '
               'DCT BEXAL DCT SAMAR UN873 NTL UZ10 ZIPAR']
->>>>>>> master
   },
   'STANDS': [
     '38.768458:-9.139267', # 404
@@ -603,7 +591,6 @@ _LPPT = {
     '38.771135:-9.137138', # 605
     '38.770957:-9.137919', # 607
   ],
-<<<<<<< HEAD
   'ARRIVAL_CALLSIGNS': {
 	  'LEMD': ['TAP1011', 'AEA1153',],
       'SBFZ': ['TAP36',],
@@ -644,8 +631,6 @@ _LPPT = {
       'SBGL':'LIGRA:19000',
     },
   }
-=======
->>>>>>> master
 }
 
 _LPPR = {
