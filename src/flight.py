@@ -18,7 +18,7 @@ $FP{callsign}{flight_plan}
 def arrival(callsign, departure, destination, rwy):
   flight_plan, entry_point = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure])
   position = AIRPORT_SETTINGS[destination]['ARRIVAL_POSITIONS'][entry_point]
-  expectedAlt = AIRPORT_SETTINGS[destination]['ARRIVAL_STARS'][rwy][departure]
+  expected_alt = AIRPORT_SETTINGS[destination]['ARRIVAL_STARS'][rwy][departure]
   route = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][entry_point])
 
   return '''
@@ -26,11 +26,11 @@ def arrival(callsign, departure, destination, rwy):
 $FP{callsign}{flight_plan}
 $ROUTE:{route}
 DELAY:3:7
-REQALT:{expectedAlt}
+REQALT:{expected_alt}
 '''.format(
     callsign=callsign,
     position=position,
     flight_plan=flight_plan,
     route=route,
-	  expectedAlt=expectedAlt
+	  expected_alt=expected_alt
   )
