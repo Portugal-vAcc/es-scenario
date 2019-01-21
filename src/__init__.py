@@ -776,8 +776,5 @@ _LPCS = {
 AIRPORT_SETTINGS = {
   'LPPR': _LPPR,
   'LPCS': _LPCS,
-<<<<<<< HEAD
   'LPPT': _LPPT,
-=======
->>>>>>> arrivals
 }
