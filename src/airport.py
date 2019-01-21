@@ -35,7 +35,7 @@ class Airport():
           ))
 
     shuffle(self.departures)
-  
+
   def _generate_arrivals(self):
     callsigns_per_departure = AIRPORT_SETTINGS[self.icao]['ARRIVAL_CALLSIGNS']
 
@@ -44,9 +44,10 @@ class Airport():
         self.arrivals.append(flight.arrival(
           callsign,
           departure,
-          self.icao
+          self.icao,
+          self.rwy
         ))
-  
+
   def __str__(self):
     return '\n'.join([
       *AIRPORT_SETTINGS[self.icao][self.rwy],
