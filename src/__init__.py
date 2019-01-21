@@ -722,8 +722,10 @@ _LPPR = {
     ]
   },
   'ARRIVAL_ROUTES': {
-    'RIVRO': ['PESUL PR662 AKULU',],
-	  'INBOM': ['ABLEG PR653 AKULU',]
+      '35':{
+          'RIVRO': ['PESUL PR662 AKULU',],
+    	  'INBOM': ['ABLEG PR653 AKULU',]
+      }
   },
   'ARRIVAL_POSITIONS': {
     'RIVRO': '40.620256:-6.724482',
@@ -774,5 +776,8 @@ _LPCS = {
 AIRPORT_SETTINGS = {
   'LPPR': _LPPR,
   'LPCS': _LPCS,
+<<<<<<< HEAD
   'LPPT': _LPPT,
+=======
+>>>>>>> arrivals
 }

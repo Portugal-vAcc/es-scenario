@@ -19,7 +19,7 @@ def arrival(callsign, departure, destination, rwy):
   flight_plan, entry_point = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure])
   position = AIRPORT_SETTINGS[destination]['ARRIVAL_POSITIONS'][entry_point]
   expected_alt = AIRPORT_SETTINGS[destination]['ARRIVAL_STARS'][rwy][departure]
-  route = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][entry_point])
+  route = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][rwy][entry_point])
 
   return '''
 @N:{callsign}:0000:1:{position}:32000:0:50:0:0
