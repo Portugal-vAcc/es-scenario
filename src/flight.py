@@ -18,7 +18,7 @@ $FP{callsign}{flight_plan}
 def arrival(callsign, departure, destination):
   flight_plan, entry_point = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure])
   position = AIRPORT_SETTINGS[destination]['ARRIVAL_POSITIONS'][entry_point]
-  expectedAlt = AIRPORT_SETTINGS[destination]['ARRIVAL_STARS'][departure]
+  expectedAlt = AIRPORT_SETTINGS[destination]['ARRIVAL_STARS']['17'][departure]
   route = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][entry_point])
 
   return '''

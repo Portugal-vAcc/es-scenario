@@ -97,12 +97,14 @@ _LPPR = {
 	'INBOM': '40,124342:-8,334573',
   },
   'ARRIVAL_STARS': {
-    'LPPT':{
-		'ABLEG': '7000',
+	'35':{
+		'LPPT':'ABLEG:7000',
+		'LEMD':'PESUL:7000',
+		},
+	'17':{
+		'LPPT':'ABLEG:8000',
+		'LEMD':'PESUL:7000',
 	},
-	'LEMD':{
-		'PESUL': '7000',
-	}
   }
 }
 
