@@ -76,7 +76,8 @@ _LPPR = {
     '41.234253:-8.674633', # S21
   ],
   'ARRIVAL_CALLSIGNS': {
-    'LPPT': ['TAP1920','TAP1921','TAP1922',]
+    'LPPT': ['TAP1920','TAP1921','TAP1922',],
+	'LEMD': ['IBE9154', 'TAP1923']
   },
   'ARRIVAL_FPL': {
     'LPPT': [
