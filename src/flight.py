@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from random import choice
+import random
 
 from . import AIRPORT_SETTINGS
 
@@ -20,17 +21,20 @@ def arrival(callsign, departure, destination, rwy):
   position = AIRPORT_SETTINGS[destination]['ARRIVAL_POSITIONS'][entry_point]
   expected_alt = AIRPORT_SETTINGS[destination]['ARRIVAL_STARS'][rwy][departure]
   route = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][rwy][entry_point])
+  start_delay = random.randint(0,30)
 
   return '''
 @N:{callsign}:0000:1:{position}:32000:0:50:0:0
 $FP{callsign}{flight_plan}
 $ROUTE:{route}
-DELAY:3:7
+START:{start_delay}
+DELAY:2:5
 REQALT:{expected_alt}
 '''.format(
     callsign=callsign,
     position=position,
     flight_plan=flight_plan,
     route=route,
-	  expected_alt=expected_alt
+    expected_alt=expected_alt,
+	start_delay=start_delay
   )
