@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from random import shuffle
+from collections import defaultdict
 
 from . import AIRPORT_SETTINGS
 from . import flight
@@ -49,6 +50,17 @@ class Airport():
         ))
     
     shuffle(self.arrivals)
+
+    def get_0():
+      return 0
+    counter = defaultdict(get_0)
+    a = []
+    for spawn, arrival in self.arrivals:
+      a.append(arrival + 'START:%s' % (counter[spawn] * 4))
+      counter[spawn] = counter[spawn] + 1
+    self.arrivals = a
+
+
 
   def __str__(self):
     return '\n'.join([
