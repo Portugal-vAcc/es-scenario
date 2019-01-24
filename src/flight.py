@@ -30,6 +30,6 @@ REQALT:{position}:{expected_alt}
     position_coords=position_coords,
     flight_plan=flight_plan,
     route=route,
-    position=position,
+    position=route.split()[0],
 	  expected_alt=expected_alt
   )
