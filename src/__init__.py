@@ -1346,24 +1346,14 @@ _LPPR = {
   },
   'ARRIVAL_ROUTES': {
       '35':{
-        'RIVRO': ['PESUL PR662 AKULU',],
-    	  'INBOM': ['ABLEG PR653 AKULU',]
+		  'RIVRO': ['PESUL PR662 AKULU', '40.620256:-6.724482', '7000'],
+    	  'INBOM': ['ABLEG PR653 AKULU', '40,124342:-8,334573', '7000']
+      },
+	  '17':{
+		  'RIVRO': ['PESUL', '40.620256:-6.724482', '7000'],
+    	  'INBOM': ['ABLEG', '40,124342:-8,334573', '8000']
       }
   },
-  'ARRIVAL_POSITIONS': {
-    'RIVRO': '40.620256:-6.724482',
-	  'INBOM': '40,124342:-8,334573',
-  },
-  'ARRIVAL_STARS': {
-    '35':{
-      'LPPT':'ABLEG:7000',
-      'LEMD':'PESUL:7000',
-      },
-    '17':{
-      'LPPT':'ABLEG:8000',
-      'LEMD':'PESUL:7000',
-    },
-  }
 }
 
 _LPCS = {
