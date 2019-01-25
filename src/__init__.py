@@ -1514,6 +1514,60 @@ _LPPR = {
   },
 }
 
+_LPMA = {
+  '05': [
+    'ILS05:N032.41.26,725:W016.46.58,012:050',
+  ],
+  '23': [
+    'ILS23:N032.42.16,574:W016.45.59,677:236',
+  ],
+  'ALL': [
+    'AIRPORT_ALT:191'
+  ],
+  'DEPARTURE_CALLSIGNS': {
+    'LPPT': ['TAP1696',],
+  },
+  'DEPARTURE_FPL': {
+    # all lines start with $FP{callsign}
+    'LPPT': [
+      ':*A:I:B738:400:LPMA:0000:0000:320:LPPT:00:00:0:0::/v/:DEGUN DCT NARTA DCT UNPOT',
+    ],  
+  },
+  'STANDS': [
+    
+  ],
+  'ARRIVAL_CALLSIGNS': {
+	'LPPT': ['TAP1699',],  
+  },
+  'ARRIVAL_FPL': {   
+	'LPPT': [
+      (':*A:I:B738:364:LPPT:0000:0000:32000:LPFR:00:00:0:0::/v/:GANSU NARTA ROLAR LIDRO', 'ROLAR'),
+    ],	
+  },
+  'ARRIVAL_ROUTES': {
+      '05':{
+		  'ROLAR': ['LIDRO MA536 MA534 MA532', '38.074316:-8.878514', '7000'], #LIDRO1C  	  
+      },
+	  '23':{
+		  'ROLAR': ['LIDRO MA536 MA534 MA532', '38.074316:-8.878514', '7000'], #LIDRO1C 	  
+      }
+  },
+  'HOLDS': {
+      '05':{
+		  'HOLDING:ABUSU:211:1',
+		  'HOLDING:MA534:227:1',
+		  'HOLDING:MA532:227:1',
+		  'HOLDING:MA514:025:-1',
+      },
+	  '23':{
+		  'HOLDING:ABUSU:211:1',
+		  'HOLDING:MA514:025:-1',
+		  'HOLDING:MA532:227:1',
+		  'HOLDING:MA514:025:-1',
+      }
+  },
+}
+
 _LPCS = {
   '35': ['ILS35:N038.43.09,278:W009.21.11,250:352'],
   '17': ['ILS17:N038.43.52,511:W009.21.26,903:172'],
@@ -1548,4 +1602,5 @@ AIRPORT_SETTINGS = {
   'LPPR': _LPPR,
   'LPCS': _LPCS,
   'LPPT': _LPPT,
+  'LPMA': _LPMA,
 }
