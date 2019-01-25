@@ -1548,10 +1548,10 @@ _LPFR = {
   },
   'ARRIVAL_ROUTES': {
       '10':{
-		  'TROIA': ['ODEMI', '38.074316:-8.878514', '15000'], #TROIA_10_NOT_EXIST  	  
+		  'TROIA': ['ODEMI', '38.074316:-8.878514', '15000'], #ODEMI_10_NOT_EXIST  	  
       },
 	  '28':{
-		  'TROIA': ['ODEMI FR607 GEBTI', '38.074316:-8.878514', '15000'], #TROIA8A 	  
+		  'TROIA': ['ODEMI FR607 GEBTI', '38.074316:-8.878514', '15000'], #ODEMI8A 	  
       }
   },
   'HOLDS': {
