@@ -1514,6 +1514,60 @@ _LPPR = {
   },
 }
 
+_LPFR = {
+  '10': [
+    'ILS10:N037.01.02,032:W007.59.08,387:100',
+	'ILS10C:N037.00.58,086:W007.58.41,034:100',
+  ],
+  '28': [
+    'ILS28:N037.00.48,305:W007.57.32,807:280',
+	'ILS28C:N037.00.52,204:W007.57.59,288:280',
+  ],
+  'ALL': [
+    'AIRPORT_ALT:24'
+  ],
+  'DEPARTURE_CALLSIGNS': {
+    'LPPT': ['TAP1902',],
+  },
+  'DEPARTURE_FPL': {
+    # all lines start with $FP{callsign}
+    'LPPT': [
+      ':*A:I:B738:400:LPFR:0000:0000:190:LPPT:00:00:0:0::/v/:ODEMI DCT TROIA',
+    ],  
+  },
+  'STANDS': [
+    
+  ],
+  'ARRIVAL_CALLSIGNS': {
+	'LPPT': ['TAP1909',],  
+  },
+  'ARRIVAL_FPL': {   
+	'LPPT': [
+      (':*A:I:B738:364:LPPT:0000:0000:32000:LPFR:00:00:0:0::/v/:TROIA DCT ODEMI', 'TROIA'),
+    ],	
+  },
+  'ARRIVAL_ROUTES': {
+      '10':{
+		  'TROIA': ['ODEMI', '38.074316:-8.878514', '15000'], #TROIA_10_NOT_EXIST  	  
+      },
+	  '28':{
+		  'TROIA': ['ODEMI FR607 GEBTI', '38.074316:-8.878514', '15000'], #TROIA8A 	  
+      }
+  },
+  'HOLDS': {
+      '10':{
+		  'HOLDING:VENOL:107:1',   
+		  'HOLDING:GIMAL:008:1',
+		  'HOLDING:USALU:131:1',
+      },
+	  '28':{
+		  'HOLDING:GEBTI:279:-1',
+		  'HOLDING:GENRO:168:1',
+		  'HOLDING:GIMAL:008:1',
+      }
+  },
+}
+
 _LPCS = {
   '35': ['ILS35:N038.43.09,278:W009.21.11,250:352'],
   '17': ['ILS17:N038.43.52,511:W009.21.26,903:172'],
@@ -1548,4 +1602,5 @@ AIRPORT_SETTINGS = {
   'LPPR': _LPPR,
   'LPCS': _LPCS,
   'LPPT': _LPPT,
+  'LPFR': _LPFR,
 }
