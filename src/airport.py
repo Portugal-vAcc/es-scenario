@@ -65,7 +65,10 @@ class Airport():
   def __str__(self):
     return '\n'.join([
       *AIRPORT_SETTINGS[self.icao][self.rwy],
+	  '\n',
       *AIRPORT_SETTINGS[self.icao]['ALL'],
+	  '\n',
+	  *AIRPORT_SETTINGS[self.icao]['HOLDS'][self.rwy],
       '\n',
       *self.departures[:self.total_departures],
       *self.arrivals[:self.total_arrivals]
