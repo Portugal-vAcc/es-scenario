@@ -1,5 +1,8 @@
 *.txt
-bin
-include
-lib
-*__pycache__
+bin/
+local/
+pip-selfcheck.json
+share/
+include/
+lib/
+__pycache__
