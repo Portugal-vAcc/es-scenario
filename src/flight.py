@@ -16,7 +16,7 @@ $FP{callsign}{flight_plan}
   )
 
 def arrival(callsign, departure, destination, rwy):
-  flight_plan, position, level, fp_direction = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure])
+  flight_plan_route, position, level, fp_direction = choice(AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure])
   route, position_coords, expected_alt = AIRPORT_SETTINGS[destination]['ARRIVAL_ROUTES'][rwy][position]
   random_altitude = choice(AIRPORT_SETTINGS[destination]['GET_FL'][fp_direction][level])
   flight_plan = ':*A:I:B738:364:'+departure+':0000:0000:'+random_altitude+':'+destination+':00:00:0:0::/v/:'
@@ -30,7 +30,7 @@ REQALT:{position}:{expected_alt}
 '''.format(
     callsign=callsign,
     position_coords=position_coords,
-    flight_plan=flight_plan+route,
+    flight_plan=flight_plan+flight_plan_route,
     route=route,
     position=route.split()[0],
     expected_alt=expected_alt,
