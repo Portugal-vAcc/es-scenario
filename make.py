@@ -1,27 +1,26 @@
 #!/usr/bin/env python3
 import sys
 from random import shuffle, choice
+import click
 
 from src.airport import Airport
 
-def main():
-  AIRPORT = sys.argv[1]
-  RUNWAY = sys.argv[2]
-  TOTAL_DEPARTURES = int(sys.argv[3])
-  TOTAL_ARRIVALS = int(sys.argv[4])
-
+@click.command()
+@click.argument('airport')
+@click.argument('runway')
+@click.option('--departures', default=10, type=int, help='Number of aircraft on the ground to depart.')
+@click.option('--arrivals', default=10, type=int, help='Number of arrivals.')
+def main(airport, runway, departures, arrivals):
+  """Generates a Euroscope's Sweatbox scenario file for an AIRPORT and RUNWAY in use"""
   with open('output.txt', 'w') as file:
     scenario = Airport(
-      AIRPORT,
-      RUNWAY,
-      total_departures=TOTAL_DEPARTURES,
-      total_arrivals=TOTAL_ARRIVALS)
+      airport,
+      runway,
+      total_departures=departures,
+      total_arrivals=arrivals)
     file.write(str(scenario))
 
   file.close()
 
 if __name__ == '__main__':
-  if len(sys.argv) < 5:
-    print('Usage: ´$ ./make.py AIRPORT RUNWAY TOTAL_DEPARTURES TOTAL_ARRIVALS´')
-  else:
     main()

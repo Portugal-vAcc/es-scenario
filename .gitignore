@@ -1,8 +1,8 @@
 *.txt
+*.pyc
 bin/
 local/
 pip-selfcheck.json
 share/
 include/
 lib/
-__pycache__
