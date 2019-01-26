@@ -32,7 +32,8 @@ class Airport():
             callsign,
             self.icao,
             destination,
-            stands.pop()
+            stands.pop(),
+			self.rwy
           ))
 
     shuffle(self.departures)
