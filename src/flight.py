@@ -7,7 +7,7 @@ def departure(callsign, departure, destination, stand, rwy):
   flight_plan, sidfix = choice(AIRPORT_SETTINGS[departure]['DEPARTURE_FPL'][destination])
   sidroute, expected_alt = AIRPORT_SETTINGS[departure]['DEPARTURE_ROUTES'][rwy][sidfix]
   
-  return '''\
+  return sidfix, '''
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
 $FP{callsign}{flight_plan}
 $ROUTE:{sidroute}
