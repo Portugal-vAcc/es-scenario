@@ -11,11 +11,14 @@ def departure(callsign, departure, destination, stand, rwy):
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
 $FP{callsign}{flight_plan}
 $ROUTE:{sidroute}
+REQALT:{sidfix}:{expected_alt}
 '''.format(
     callsign=callsign,
     stand=stand,
     flight_plan=flight_plan,
-	sidroute=sidroute
+	sidroute=sidroute,
+	sidfix=sidfix,
+	expected_alt=expected_alt
   )
 
 def arrival(callsign, departure, destination, rwy):
