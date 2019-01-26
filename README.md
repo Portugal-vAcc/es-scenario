@@ -8,13 +8,12 @@ Install the python runtime, if not installed already, https://www.python.org/dow
 
 Use pip to download and install the program from source:
 
-  pip install git+https://github.com/Portugal-vAcc/es-scenario.git
+    pip install git+https://github.com/Portugal-vAcc/es-scenario.git
 
 # Usage
 
-  esmake [OPTIONS] AIRPORT RUNWAY
+    $ esmake [OPTIONS] AIRPORT RUNWAY
 
-Options:
-  --departures INTEGER  Number of aircraft on the ground to depart.
-  --arrivals INTEGER    Number of arrivals.
-  --help                Show this message and exit.
+## Options:
+  `--departures` INTEGER  Number of aircraft on the ground to depart. 
+  `--arrivals INTEGER`    Number of arrivals.
