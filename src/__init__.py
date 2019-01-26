@@ -1754,7 +1754,7 @@ _LPMA = {
   'DEPARTURE_FPL': {
     # all lines start with $FP{callsign}
     'LPPT': [
-      ('DEGUN DCT NARTA DCT UNPOT', 'HIGH_LEVEL', 'ODD',)
+      ('DEGUN DCT NARTA DCT UNPOT', 'LOW_LEVEL', 'EVEN',)
     ],  
   },
   'STANDS': [
@@ -1778,9 +1778,10 @@ _LPMA = {
 	'LPPT': ['TAP1699',],  
   },
   'ARRIVAL_FPL': {   
-	'LPPT': [
-      (':*A:I:B738:364:LPPT:0000:0000:32000:LPFR:00:00:0:0::/v/:GANSU DCT NARTA DCT ROLAR DCT LIDRO', 'ROLAR'),
-    ],	
+	'LPPT': [ ( 'GANSU DCT NARTA DCT ROLAR DCT LIDRO',
+				'ROLAR',
+				'LOW_LEVEL',
+				'EVEN')]	
   },
   'ARRIVAL_ROUTES': {
       '05':{
