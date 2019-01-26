@@ -21,10 +21,12 @@ def arrival(callsign, departure, destination, rwy):
   random_altitude = choice(AIRPORT_SETTINGS[destination]['GET_FL'][fp_direction][level])
   flight_plan = ':*A:I:B738:364:'+departure+':0000:0000:'+random_altitude+':'+destination+':00:00:0:0::/v/:'
   
+  #Preve planos de voo inferiores à altitude de cruzeiro para LOW_LEVEL FP's	
   if (random_altitude < expected_alt and level == 'LOW_LEVEL'):
 	  expected_alt = random_altitude
   #Prever a mesma situação para HIGH_LEVEL	  
-  #if (random_altitude < expected_alt and level == 'HIGH_LEVEL'):
+  if (random_altitude < expected_alt and level == 'HIGH_LEVEL'):
+	  random_altitude = max(AIRPORT_SETTINGS[destination]['GET_FL'][fp_direction][level])
 	   
 	
   return position_coords, '''
