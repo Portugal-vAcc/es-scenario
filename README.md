@@ -15,5 +15,5 @@ Use pip to download and install the program from source:
     $ esmake [OPTIONS] AIRPORT RUNWAY
 
 ## Options:
-`--departures` INTEGER  Number of aircraft on the ground to depart.  
-`--arrivals INTEGER`    Number of arrivals.
+**--departures** `INTEGER`  Number of aircraft on the ground to depart.  
+**--arrivals** `INTEGER`    Number of arrivals.
