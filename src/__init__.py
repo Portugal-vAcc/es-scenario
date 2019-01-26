@@ -1770,7 +1770,7 @@ _LPMA = {
 	'LPPT': [ ( 'GANSU DCT NARTA DCT ROLAR DCT LIDRO',
 				'ROLAR',
 				'LOW_LEVEL',
-				'EVEN')]	
+				'ODD')]	
   },
   'ARRIVAL_ROUTES': {
       '05':{
