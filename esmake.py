@@ -41,8 +41,8 @@ def main(airport, runway, departures, arrivals):
             total_departures=departures,
             total_arrivals=arrivals)
 
-    file.write(str(scenario))
-    file.close()
+        file.write(str(scenario))
+        file.close()
 
 if __name__ == '__main__':
     main() # pylint: disable=E1120
