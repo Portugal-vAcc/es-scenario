@@ -38,7 +38,7 @@ def make_scenario(icao, rwy, total_departures, total_arrivals):
     Returns:
         list: A list of str containing the scenario lines to feed to the output file.
     """
-    departures = _generate_departures(icao)
+    departures = _generate_departures(icao, rwy)
     arrivals = _generate_arrivals(icao, rwy)
 
     return '\n'.join([
@@ -49,7 +49,7 @@ def make_scenario(icao, rwy, total_departures, total_arrivals):
         *arrivals[:total_arrivals]
     ])
 
-def _generate_departures(icao):
+def _generate_departures(icao, rwy):
     """Generates a random list of departure flights from a list of flights.
 
     Args:
@@ -67,58 +67,59 @@ def _generate_departures(icao):
     for destination in callsigns_per_destination:
       for callsign in callsigns_per_destination[destination]:
         if (len(stands) > 0):
-          self.departures.append(flight.departure(
+          departures.append(flight.departure(
             callsign,
-            self.icao,
+            icao,
             destination,
             stands.pop(),
-			self.rwy
+			rwy
           ))
 
-    shuffle(self.departures)
+    shuffle(departures)
 
     def get_0():
       return 0
     counter = defaultdict(get_0)
     d = []
-    for spawn, departure in self.departures:
+    for spawn, departure in departures:
       d.append(departure + 'START:%s' % (counter[spawn] * 1))
       counter[spawn] = counter[spawn] + 1
-    self.departures = d
+    departures = d
 
-  def _generate_arrivals(self):
-    callsigns_per_departure = AIRPORT_SETTINGS[self.icao]['ARRIVAL_CALLSIGNS']
+def _generate_arrivals(icao, rwy):
+    arrivals = list()
+    callsigns_per_departure = AIRPORT_SETTINGS[icao]['ARRIVAL_CALLSIGNS']
 
     for departure in callsigns_per_departure:
       for callsign in callsigns_per_departure[departure]:
-        self.arrivals.append(flight.arrival(
+        arrivals.append(flight.arrival(
           callsign,
           departure,
-          self.icao,
-          self.rwy
+          icao,
+          rwy
         ))
 
-    shuffle(self.arrivals)
+    shuffle(arrivals)
 
     def get_0():
       return 0
     counter = defaultdict(get_0)
     a = []
-    for spawn, arrival in self.arrivals:
+    for spawn, arrival in arrivals:
       a.append(arrival + 'START:%s' % (counter[spawn] * 4))
       counter[spawn] = counter[spawn] + 1
-    self.arrivals = a
+    arrivals = a
 
 
 
-  def __str__(self):
+def __str__(self):
     return '\n'.join([
-      *AIRPORT_SETTINGS[self.icao][self.rwy],
+      *AIRPORT_SETTINGS[icao][rwy],
 	  '\n',
-      *AIRPORT_SETTINGS[self.icao]['ALL'],
+      *AIRPORT_SETTINGS[icao]['ALL'],
 	  '\n',
-	  *AIRPORT_SETTINGS[self.icao]['HOLDS'][self.rwy],
+	  *AIRPORT_SETTINGS[icao]['HOLDS'][rwy],
       '\n',
-      *self.departures[:self.total_departures],
-      *self.arrivals[:self.total_arrivals]
+      *departures[:total_departures],
+      *arrivals[:total_arrivals]
     ])

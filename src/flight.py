@@ -31,13 +31,14 @@ def departure(callsign, departure, destination, stand, rwy):
 
   return sidfix, '''
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
-$FP{callsign}{flight_plan}
+$FP{callsign}{flight_plan}{route}
 $ROUTE:{sidroute}
 REQALT:{sidfix}:{expected_alt}
 '''.format(
     callsign=callsign,
     stand=stand,
-    flight_plan=flight_plan+route,
+    flight_plan=flight_plan,
+	route=route,
 	sidroute=sidroute,
 	sidfix=sidfix,
 	expected_alt=expected_alt
@@ -59,14 +60,15 @@ def arrival(callsign, departure, destination, rwy):
 
   return position_coords, '''
 @N:{callsign}:0000:1:{position_coords}:{random_altitude}:0:50:0:0
-$FP{callsign}{flight_plan}
+$FP{callsign}{flight_plan}{flight_plan_route}
 $ROUTE:{route}
 DELAY:3:7
 REQALT:{position}:{expected_alt}
 '''.format(
     callsign=callsign,
     position_coords=position_coords,
-    flight_plan=flight_plan+flight_plan_route,
+    flight_plan=flight_plan,
+	flight_plan_route=flight_plan_route,
     route=route,
     position=route.split()[0],
     expected_alt=expected_alt,
