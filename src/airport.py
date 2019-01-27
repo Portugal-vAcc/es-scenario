@@ -27,7 +27,7 @@ class Airport():
     for destination in callsigns_per_destination:
       for callsign in callsigns_per_destination[destination]:
         if (len(stands) > 0):
-          self.departures.append(flight.departure(
+          self.departures.append(flight.make_departure(
             callsign,
             self.icao,
             destination,
@@ -41,7 +41,7 @@ class Airport():
 
     for departure in callsigns_per_departure:
       for callsign in callsigns_per_departure[departure]:
-        self.arrivals.append(flight.arrival(
+        self.arrivals.append(flight.make_arrival(
           callsign,
           departure,
           self.icao,
