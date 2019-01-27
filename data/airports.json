@@ -4107,6 +4107,64 @@
                 ]
             ]
         },
+		"DEPARTURE_ROUTES": {
+            "05": {
+                "DEGUN": [
+                    "XAVAL POBAR DEGUN",
+                    "6000"
+                ],
+				"NIDUL": [
+                    "XERON NIDUL",
+                    "6000"
+                ],
+				"IRKID": [
+                    "FUN IRKID",
+                    "6000"
+                ],
+				"MADAT": [
+                    "MADAT",
+                    "6000"
+                ],
+				"ORTIS": [
+                    "GOSGA ORTIS",
+                    "6000"
+                ],
+				"SNT": [
+                    "FUN SNT",
+                    "6000"
+                ],
+				"TABOM": [
+                    "FUN SNT",
+                    "6000"
+                ]
+            },
+            "23": {
+                "DEGUN": [
+                    "XAVAL POBAR DEGUN",
+                    "6000"
+                ],
+				"NIDUL": [
+                    "XERON NIDUL",
+                    "6000"
+                ],
+				"IRKID": [
+                    "FUN IRKID",
+                    "6000"
+                ],
+				"ORTIS": [
+                    "GOSGA ORTIS",
+                    "6000"
+                ],
+				"SNT": [
+                    "FUN SNT",
+                    "6000"
+                ],
+				"TABOM": [
+                    "FUN SNT",
+                    "6000"
+                ]
+            }
+        },
         "STANDS": [
             "32.692286:-16.778248",
             "32.692573:-16.777931",
