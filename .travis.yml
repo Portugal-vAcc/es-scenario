@@ -3,5 +3,8 @@ python:
     - "3.6"
 before_script:
     - pip install -r dev-requirements.txt
+    - pip install .
 script:
     - python setup.py lint
+    - esmake LPPT 03
+    - esmake LPPT 21
