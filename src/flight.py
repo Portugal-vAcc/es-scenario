@@ -2,8 +2,8 @@
 """
 Euroscope Sweatbox Scenario Maker
 
-Copyright (C) 2019    Pedro Rodrigues <prodrigues1990@gmail.com>
-                                        Tiago Vicente <tmavicente@gmail.com>
+Copyright (C) 2019  Pedro Rodrigues <prodrigues1990@gmail.com>
+                    Tiago Vicente <tmavicente@gmail.com>
 
 This file is part of Euroscope Sweatbox Scenario Maker.
 
@@ -13,7 +13,7 @@ the Free Software Foundation, version 2 of the License.
 
 Euroscope Sweatbox Scenario Maker is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.    See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
