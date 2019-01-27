@@ -1,5 +1,5 @@
 language: python
-  python:
-    - "3.6"
-  script:
-    - python setup.py lint
+    python:
+        - "3.6"
+    script:
+        - python setup.py lint
