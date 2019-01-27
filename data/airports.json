@@ -1834,6 +1834,10 @@
 				"FTM": [
                     "NETVO KELIK GUDAV FTM",
                     "7000"
+                ],
+				"IDBID": [
+                    "NETVO IDBID",
+                    "7000"
                 ]
             }			
         },
