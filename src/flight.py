@@ -4,7 +4,9 @@ from random import choice
 from . import AIRPORT_SETTINGS
 
 def departure(callsign, departure, destination, stand):
-  flight_plan = choice(AIRPORT_SETTINGS[departure]['DEPARTURE_FPL'][destination])
+  route, level, fp_direction = choice(AIRPORT_SETTINGS[departure]['DEPARTURE_FPL'][destination])
+  random_altitude = choice(AIRPORT_SETTINGS[departure]['GET_FL'][fp_direction][level])
+  flight_plan = ':*A:I:B738:400:'+departure+':0000:0000:'+random_altitude+':'+destination+':00:00:0:0::/v/:'
 
   return '''\
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
@@ -12,7 +14,7 @@ $FP{callsign}{flight_plan}
 '''.format(
     callsign=callsign,
     stand=stand,
-    flight_plan=flight_plan
+    flight_plan=flight_plan+route
   )
 
 def arrival(callsign, departure, destination, rwy):
