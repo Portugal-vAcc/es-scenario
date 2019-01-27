@@ -47,6 +47,15 @@ class Airport():
       counter[spawn] = counter[spawn] + 1
     self.departures = d
 
+    def get_0():
+      return 0
+    counter = defaultdict(get_0)
+    d = []
+    for spawn, departure in self.departures:
+      d.append(departure + 'START:%s' % (counter[spawn] * 1))
+      counter[spawn] = counter[spawn] + 1
+    self.departures = d
+	
   def _generate_arrivals(self):
     callsigns_per_departure = AIRPORT_SETTINGS[self.icao]['ARRIVAL_CALLSIGNS']
 
