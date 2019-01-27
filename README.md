@@ -1,6 +1,6 @@
 # Euroscope Sweatbox Scenario file generator
 
-Generates a Euroscope's Sweatbox scenario file for an AIRPORT and RUNWAY in use.
+Generates a random Euroscope's Sweatbox scenario file for an AIRPORT and RUNWAY in use.
 
 # Installation
 
@@ -18,3 +18,9 @@ Use pip to download and install the program from source:
 
 **--departures** `INTEGER`  Number of aircraft on the ground to depart.  
 **--arrivals** `INTEGER`    Number of arrivals.
+
+## Usage Examples
+
+    $ esmake LPPT 03 --arrivals=0 --departure=50
+
+50 departures, with no arrival aircraft
