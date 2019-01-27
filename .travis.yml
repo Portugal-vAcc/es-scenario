@@ -1,0 +1,7 @@
+language: python
+python:
+    - "3.6"
+before_script:
+    - pip install -r dev-requirements.txt
+script:
+    - python setup.py lint
