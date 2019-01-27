@@ -8,7 +8,7 @@ Install the python runtime, if not installed already, https://www.python.org/dow
 
 Use pip to download and install the program from source:
 
-    $ gitpip install git+https://github.com/Portugal-vAcc/es-scenario.git
+    $ pip install git+https://github.com/Portugal-vAcc/es-scenario.git
 
 # Usage
 
