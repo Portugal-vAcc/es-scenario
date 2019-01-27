@@ -1472,22 +1472,22 @@ _LPPT = {
     },
   },
   'HOLDS': {
-      '03':{
+      '03':[
 		'HOLDING:ADSAD:344:1',
 		'HOLDING:EKMAR:44:-1',
 		'HOLDING:BADUM:216:1',
 		'HOLDING:UMUPI:182:1',
 		'HOLDING:PINIM:114:1',
 		'HOLDING:PESEX:026:1',
-      },
-	  '21':{
+      ],
+	  '21':[
 		'HOLDING:AGUVO:243:-1',
 		'HOLDING:EKMAR:44:-1',
 		'HOLDING:PINIM:114:1',
 		'HOLDING:UMUPI:182:1',
 		'HOLDING:RINOR:223:-1',
 		'HOLDING:UPKAT:206:-1',
-      }
+      ]
   },
 }
 
@@ -1782,16 +1782,16 @@ _LPPR = {
       }
   },
   'HOLDS': {
-      '35':{
+      '35':[
 		  'HOLDING:AKULU:352:-1',
     	  'HOLDING:DIVUT:315:-1',
 		  'HOLDING:RETMO:83:1',
-      },
-	  '17':{
+      ],
+	  '17':[
 		  'HOLDING:RETMO:83:1',
 		  'HOLDING:VASIP:223:-1',
 		  'HOLDING:ADNOV:172:1',
-      }
+      ]
   },
 }
 
@@ -2049,16 +2049,16 @@ _LPFR = {
       }
   },
   'HOLDS': {
-      '10':{
+      '10':[
 		  'HOLDING:VENOL:107:1',
 		  'HOLDING:GIMAL:008:1',
 		  'HOLDING:USALU:131:1',
-      },
-	  '28':{
+      ],
+	  '28':[
 		  'HOLDING:GEBTI:279:-1',
 		  'HOLDING:GENRO:168:1',
 		  'HOLDING:GIMAL:008:1',
-      }
+      ]
   },
 }
 
@@ -2155,18 +2155,18 @@ _LPMA = {
       }
   },
   'HOLDS': {
-      '05':{
+      '05':[
 		  'HOLDING:ABUSU:211:1',
 		  'HOLDING:MA534:227:1',
 		  'HOLDING:MA532:227:1',
 		  'HOLDING:MA514:025:-1',
-      },
-	  '23':{
+      ],
+	  '23':[
 		  'HOLDING:ABUSU:211:1',
 		  'HOLDING:MA514:025:-1',
 		  'HOLDING:MA532:227:1',
 		  'HOLDING:MA514:025:-1',
-      }
+      ]
   },
 }
 
