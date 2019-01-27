@@ -49,7 +49,7 @@ def make_departure(callsign, departure, destination, stand, rwy):
     )
     sidroute, expected_alt = AIRPORT_SETTINGS[departure]['DEPARTURE_ROUTES'][rwy][sidfix]
 
-    return sidfix, '''
+    return '''
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
 $FP{callsign}{flight_plan}{route}
 $ROUTE:{sidroute}
@@ -94,7 +94,7 @@ def make_arrival(callsign, departure, destination, rwy):
             # use a higher cruise level
             altitude = max(AIRPORT_SETTINGS[destination]['GET_FL'][fp_direction][level])
 
-    return position_coords, '''\
+    return '''\
 @N:{callsign}:0000:1:{position_coords}:{altitude}:0:50:0:0
 $FP{callsign}:*A:I:B738:364:{departure}:0000:0000:{altitude}:{destination}:00:00:0:0::/v/:{flight_plan_route}
 $ROUTE:{route}
