@@ -1743,6 +1743,100 @@
                 ]
             ]
         },
+		"DEPARTURE_ROUTES": {
+            "03": {
+                "BUSEN": [
+                    "PT416 MONUR BUSEN",
+                    "7000"
+                ],
+				"GAIOS": [
+                    "PT416 MONUR GAIOS",
+                    "7000"
+                ], 
+				"GANSU": [
+                    "PT416 MONUR GANSU",
+                    "7000"
+                ],
+				"INBOM": [
+                    "PT412 USIVI IDBID",
+                    "7000"
+                ],
+				"IXIDA": [
+                    "PT412 IXIDA",
+                    "7000"
+                ],
+				"IDBID": [
+                    "PT412 IDBID",
+                    "7000"
+                ],
+				"TROIA": [
+                    "PT416 MONUR TROIA",
+                    "7000"
+                ],
+				"NAKOS": [
+                    "PT416 MONUR NAKOS",
+                    "7000"
+                ],
+				"LIGRA": [
+                    "PT416 MONUR LIGRA",
+                    "7000"
+                ],
+				"ESP": [
+                    "ROKOB ERUKU ESP",
+                    "7000"
+                ],
+				"FTM": [
+                    "ROKOB BOMKO ALAMA FTM",
+                    "7000"
+                ]
+            },
+            "21": {
+                "BUSEN": [
+                    "NETVO BUSEN",
+                    "7000"
+                ],
+				"EXONA": [
+                    "NETVO GUDAV EXONA",
+                    "7000"
+                ],  
+				"GAIOS": [
+                    "NETVO GAIOS",
+                    "7000"
+                ], 
+				"GANSU": [
+                    "NETVO GANSU",
+                    "7000"
+                ],
+				"INBOM": [
+                    "GUDAV USIVI IDBID",
+                    "7000"
+                ],
+				"IXIDA": [
+                    "GUDAV IXIDA",
+                    "7000"
+                ],
+				"TROIA": [
+                    "NETVO TROIA",
+                    "7000"
+                ],
+				"NAKOS": [
+                    "NETVO NAKOS",
+                    "7000"
+                ],
+				"LIGRA": [
+                    "NETVO LIGRA",
+                    "7000"
+                ],
+				"ESP": [
+                    "NETVO ESP",
+                    "7000"
+                ],
+				"FTM": [
+                    "NETVO KELIK GUDAV FTM",
+                    "7000"
+                ]
+            }			
+        },
         "STANDS": [
             "38.768458:-9.139267",
             "38.767900:-9.139088",
