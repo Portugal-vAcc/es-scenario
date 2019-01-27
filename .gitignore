@@ -1,5 +1,10 @@
 *.txt
-bin
-include
-lib
-*__pycache__
+*.pyc
+bin/
+local/
+pip-selfcheck.json
+share/
+include/
+lib/
+build/
+*.egg-info/
