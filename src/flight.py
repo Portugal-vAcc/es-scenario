@@ -3,18 +3,24 @@ from random import choice
 
 from . import AIRPORT_SETTINGS
 
-def departure(callsign, departure, destination, stand):
-  route, level, fp_direction = choice(AIRPORT_SETTINGS[departure]['DEPARTURE_FPL'][destination])
+def departure(callsign, departure, destination, stand, rwy):
+  route, level, fp_direction, sidfix = choice(AIRPORT_SETTINGS[departure]['DEPARTURE_FPL'][destination])
   random_altitude = choice(AIRPORT_SETTINGS[departure]['GET_FL'][fp_direction][level])
   flight_plan = ':*A:I:B738:400:'+departure+':0000:0000:'+random_altitude+':'+destination+':00:00:0:0::/v/:'
+  sidroute, expected_alt = AIRPORT_SETTINGS[departure]['DEPARTURE_ROUTES'][rwy][sidfix]
 
-  return '''\
+  return sidfix, '''
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
 $FP{callsign}{flight_plan}
+$ROUTE:{sidroute}
+REQALT:{sidfix}:{expected_alt}
 '''.format(
     callsign=callsign,
     stand=stand,
-    flight_plan=flight_plan+route
+    flight_plan=flight_plan+route,
+	sidroute=sidroute,
+	sidfix=sidfix,
+	expected_alt=expected_alt
   )
 
 def arrival(callsign, departure, destination, rwy):
