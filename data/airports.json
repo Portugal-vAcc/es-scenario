@@ -3630,6 +3630,132 @@
                 ]
             ]
         },
+		"DEPARTURE_ROUTES": {
+            "10": {
+                "AMSEL": [
+                    "AMSEL",
+                    "6000"
+                ],
+				"BAROK": [
+                    "BAROK",
+                    "6000"
+                ],
+				"NARTA": [
+                    "NARTA",
+                    "6000"
+                ],
+				"ODEMI": [
+                    "ODEMI",
+                    "6000"
+                ],
+				"ORTOP": [
+                    "ORTOP",
+                    "6000"
+                ],
+				"XAPAS": [
+                    "XAPAS",
+                    "6000"
+                ],
+				"ALAGU": [
+                    "FR611 FR621 ALAGU",
+                    "6000"
+                ],
+				"GIMAL": [
+                    "FR611 FR624 GIMAL",
+                    "6000"
+                ],
+				"EVURA": [
+                    "EVURA",
+                    "6000"
+                ],
+				"IXOLI": [
+                    "IXOLI",
+                    "6000"
+                ],
+				"NIRAK": [
+                    "FR611 FR621 NIRAK",
+                    "6000"
+                ],
+				"ODEMI": [
+                    "FR611 FR621 ODEMI",
+                    "6000"
+                ],
+				"OSLAD": [
+                    "FR611 FR624 OSLAD",
+                    "6000"
+                ],
+				"SOTEX": [
+                    "SOTEX",
+                    "6000"
+                ],
+				"TUPIX": [
+                    "TUPIX",
+                    "6000"
+                ]
+            },
+            "28": {
+                "AMSEL": [
+                    "AMSEL",
+                    "6000"
+                ],
+				"BAROK": [
+                    "BAROK",
+                    "6000"
+                ],
+				"NARTA": [
+                    "NARTA",
+                    "6000"
+                ],
+				"ODEMI": [
+                    "ODEMI",
+                    "6000"
+                ],
+				"ORTOP": [
+                    "ORTOP",
+                    "6000"
+                ],
+				"XAPAS": [
+                    "XAPAS",
+                    "6000"
+                ],
+				"ALAGU": [
+                    "ALAGU",
+                    "6000"
+                ],
+				"GIMAL": [
+                    "GIMAL",
+                    "6000"
+                ],
+				"EVURA": [
+                    "FR612 EVURA",
+                    "6000"
+                ],
+				"IXOLI": [
+                    "FR612 IXOLI",
+                    "6000"
+                ],
+				"NIRAK": [
+                    "NIRAK",
+                    "6000"
+                ],
+				"ODEMI": [
+                    "FR612 FR622 ODEMI",
+                    "6000"
+                ],
+				"OSLAD": [
+                    "FR612 OSLAD",
+                    "6000"
+                ],
+				"SOTEX": [
+                    "FR612 FR623 SOTEX",
+                    "6000"
+                ],
+				"TUPIX": [
+                    "FR612 FR613 FR614 TUPIX",
+                    "6000"
+                ]
+            }
+        },
         "STANDS": [
             "37.019055:-7.973416",
             "37.018994:-7.972869",
