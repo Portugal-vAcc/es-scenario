@@ -1,4 +1,4 @@
-# Euroscope Sweatbox Scenario file generator
+# Euroscope Sweatbox Scenario file generator [![Build Status](https://travis-ci.org/pedro2555/scenarios-es.svg?branch=master)](https://travis-ci.org/pedro2555/scenarios-es)
 
 Generates a random Euroscope's Sweatbox scenario file for an AIRPORT and RUNWAY in use.
 
