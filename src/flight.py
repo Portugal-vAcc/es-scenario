@@ -66,12 +66,14 @@ REQALT:{sidfix}:{expected_alt}
 
 def make_arrival(callsign, departure, destination, rwy):
     """Generates a random arrival flight from a list of flights.
+
     Args:
         callsign (str): The aircraft callsign.
         departure (str): The ICAO code for the departing airfield.
         destination (str): The ICAO code for the flight destination airfield
             (ie. the airport we're simulating).
         rwy (str): The runway in use.
+        
     Returns:
         str: The flight string to be feed into the scenario file.
     """
