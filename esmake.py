@@ -21,7 +21,7 @@ along with Euroscope Sweatbox Scenario Maker. If not, see <http://www.gnu.org/li
 """
 import click
 
-from src.airport import Airport
+from src.airport import make_scenario
 
 @click.command()
 @click.argument('airport')
@@ -35,7 +35,7 @@ from src.airport import Airport
 def main(airport, runway, departures, arrivals):
     """Generates a Euroscope's Sweatbox scenario file for an AIRPORT and RUNWAY in use"""
     with open('output.txt', 'w') as file:
-        scenario = Airport(
+        scenario = make_scenario(
             airport,
             runway,
             total_departures=departures,
