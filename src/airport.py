@@ -20,6 +20,7 @@ You should have received a copy of the GNU General Public License
 along with Euroscope Sweatbox Scenario Maker. If not, see <http://www.gnu.org/licenses/>.
 """
 from random import shuffle
+from collections import defaultdict
 
 from . import AIRPORT_SETTINGS
 from . import flight
@@ -102,5 +103,14 @@ def _generate_arrivals(icao, rwy):
             ))
 
     shuffle(arrivals)
+
+    def get_0():
+        return 0
+    counter = defaultdict(get_0)
+    _arrivals = []
+    for spawn, arrival in arrivals:
+        _arrivals.append(arrival + 'START:%s' % (counter[spawn] * 4))
+        counter[spawn] = counter[spawn] + 1
+    arrivals = _arrivals
 
     return arrivals
