@@ -36,6 +36,7 @@ def make_departure(callsign, departure, destination, stand, rwy):
     Returns:
         str: The flight string to be feed into the scenario file.
     """
+    company_icao = callsign[0:3]
     route, level, fp_direction, sidfix = choice(
         AIRPORT_SETTINGS[departure]['DEPARTURE_FPL'][destination]
         )
@@ -53,7 +54,7 @@ def make_departure(callsign, departure, destination, stand, rwy):
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
 $FP{callsign}{flight_plan}{route}
 $ROUTE:{sidroute}
-SIMDATA:{callsign}:B738:RYR:25:3:0.000
+SIMDATA:{callsign}:B738:{company_icao}:25:3:0.000
 REQALT:{sidfix}:{expected_alt}
 '''.format(
         callsign=callsign,
@@ -62,7 +63,8 @@ REQALT:{sidfix}:{expected_alt}
         route=route,
         sidroute=sidroute,
         sidfix=sidfix,
-        expected_alt=expected_alt
+        expected_alt=expected_alt,
+        company_icao=company_icao
     )
 
 def make_arrival(callsign, departure, destination, rwy):
@@ -78,6 +80,7 @@ def make_arrival(callsign, departure, destination, rwy):
     Returns:
         str: The flight string to be feed into the scenario file.
     """
+    company_icao = callsign[0:3]
     fpl_data = AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure]
     flight_plan_route, position, level, fp_direction = choice(fpl_data)
 
@@ -99,7 +102,7 @@ def make_arrival(callsign, departure, destination, rwy):
 @N:{callsign}:0000:1:{position_coords}:{altitude}:0:50:0:0
 $FP{callsign}:*A:I:B738:364:{departure}:0000:0000:{altitude}:{destination}:00:00:0:0::/v/:{flight_plan_route}
 $ROUTE:{route}
-SIMDATA:{callsign}:B738:RYR:25:3:0.000
+SIMDATA:{callsign}:B738:{company_icao}:25:3:0.000
 DELAY:3:7
 REQALT:{position}:{expected_alt}
 '''.format(
@@ -111,5 +114,6 @@ REQALT:{position}:{expected_alt}
         expected_alt=expected_alt,
         altitude=altitude,
         departure=departure,
-        destination=destination
+        destination=destination,
+        company_icao=company_icao
     )
