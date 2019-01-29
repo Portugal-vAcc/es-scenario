@@ -41,7 +41,7 @@ def make_departure(callsign, departure, destination, stand, rwy):
         AIRPORT_SETTINGS[departure]['DEPARTURE_FPL'][destination]
         )
     random_altitude = choice(AIRPORT_SETTINGS[departure]['GET_FL'][fp_direction][level])
-    flight_plan = '''
+    flight_plan = '''\
 :*A:I:B738:400:{departure}:0000:0000:{random_altitude}:{destination}:00:00:0:0::/v/:
 '''.format(
         departure=departure,
