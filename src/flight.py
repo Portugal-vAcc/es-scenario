@@ -79,7 +79,6 @@ def make_arrival(callsign, departure, destination, rwy):
     Returns:
         str: The flight string to be feed into the scenario file.
     """
-    company_icao = callsign[0:3]
     fpl_data = AIRPORT_SETTINGS[destination]['ARRIVAL_FPL'][departure]
     flight_plan_route, position, level, fp_direction = choice(fpl_data)
 
@@ -114,5 +113,5 @@ REQALT:{position}:{expected_alt}
         altitude=altitude,
         departure=departure,
         destination=destination,
-        company_icao=company_icao
+        company_icao=callsign[0:3]
     )
