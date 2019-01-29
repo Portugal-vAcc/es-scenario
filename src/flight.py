@@ -53,6 +53,7 @@ def make_departure(callsign, departure, destination, stand, rwy):
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
 $FP{callsign}{flight_plan}{route}
 $ROUTE:{sidroute}
+SIMDATA:{callsign}:B738:RYR:25:3:0.000
 REQALT:{sidfix}:{expected_alt}
 '''.format(
         callsign=callsign,
@@ -98,6 +99,7 @@ def make_arrival(callsign, departure, destination, rwy):
 @N:{callsign}:0000:1:{position_coords}:{altitude}:0:50:0:0
 $FP{callsign}:*A:I:B738:364:{departure}:0000:0000:{altitude}:{destination}:00:00:0:0::/v/:{flight_plan_route}
 $ROUTE:{route}
+SIMDATA:{callsign}:B738:RYR:25:3:0.000
 DELAY:3:7
 REQALT:{position}:{expected_alt}
 '''.format(
