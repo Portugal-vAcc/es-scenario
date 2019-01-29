@@ -42,15 +42,14 @@ def make_departure(callsign, departure, destination, stand, rwy):
         )
     random_altitude = choice(AIRPORT_SETTINGS[departure]['GET_FL'][fp_direction][level])
     flight_plan = '''\
-:*A:I:B738:400:{departure}:0000:0000:{random_altitude}:{destination}:00:00:0:0::/v/:
-'''.format(
+:*A:I:B738:400:{departure}:0000:0000:{random_altitude}:{destination}:00:00:0:0::/v/:'''.format(
         departure=departure,
         random_altitude=random_altitude,
         destination=destination
     )
     sidroute, expected_alt = AIRPORT_SETTINGS[departure]['DEPARTURE_ROUTES'][rwy][sidfix]
 
-    return '''
+    return '''\
 @N:{callsign}:2200:1:{stand}:0:0:0:0:0
 $FP{callsign}{flight_plan}{route}
 $ROUTE:{sidroute}
